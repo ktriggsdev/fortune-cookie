@@ -132,14 +132,24 @@ cookie_msg = [
 
 option = input("> ")  # always remember to close your opening brackets!
 
-while option != "q" and option != "Q":
+while option != "q" and option != "Q": 
+
+# while the option is not equal to q and option is not equal to Q if option is equal to o or option is equal to O then print a random message from the list cookie_msg. 
+
     if option == "o" or option == "O":
         print(rd.choice(cookie_msg))
+
+        # add a second input command so that if the user wants to generate more fortune cookies they can
+
         option = input("> ")
     else:
+
+    # if option is not equal to q, Q, o or O then the else statement ensures that a error message is printed to the console saying invalid option, the user is then given an option to input a character that does match the valid list of options.
         print("Invalid option. Try again.")
         option = input("> ")
 else:
+# if the user enters q or Q as input a goodbye message is printed to the console and the program exits.
+
     print("Goodbye!")
     quit()
 
